@@ -1,0 +1,1004 @@
+{
+    "Players": [
+        {
+            "Name": "ciaran",
+            "ELO": 1054,
+            "ELOChange": 9,
+            "Stats": {
+                "MatchesPlayed": 7,
+                "MatchesWon": 4,
+                "AllTimeAveragePlace": 18,
+                "Last5Finish": [
+                    4,
+                    8,
+                    1,
+                    2,
+                    1
+                ],
+                "PeakELO": 1054
+            }
+        },
+        {
+            "Name": "james",
+            "ELO": 1044,
+            "ELOChange": 15,
+            "Stats": {
+                "MatchesPlayed": 7,
+                "MatchesWon": 2,
+                "AllTimeAveragePlace": 24,
+                "Last5Finish": [
+                    9,
+                    1,
+                    3,
+                    1,
+                    2
+                ],
+                "PeakELO": 1044
+            }
+        },
+        {
+            "Name": "evan",
+            "ELO": 1013,
+            "ELOChange": 10,
+            "Stats": {
+                "MatchesPlayed": 4,
+                "MatchesWon": 0,
+                "AllTimeAveragePlace": 17,
+                "Last5Finish": [
+                    4,
+                    5,
+                    6,
+                    2
+                ],
+                "PeakELO": 1013
+            }
+        },
+        {
+            "Name": "stan",
+            "ELO": 1013,
+            "ELOChange": 10,
+            "Stats": {
+                "MatchesPlayed": 2,
+                "MatchesWon": 0,
+                "AllTimeAveragePlace": 7,
+                "Last5Finish": [
+                    5,
+                    2
+                ],
+                "PeakELO": 1013
+            }
+        },
+        {
+            "Name": "dylan",
+            "ELO": 1009,
+            "ELOChange": 9,
+            "Stats": {
+                "MatchesPlayed": 1,
+                "MatchesWon": 0,
+                "AllTimeAveragePlace": 2,
+                "Last5Finish": [
+                    2
+                ],
+                "PeakELO": 1009
+            }
+        },
+        {
+            "Name": "ben",
+            "ELO": 1009,
+            "ELOChange": -9,
+            "Stats": {
+                "MatchesPlayed": 6,
+                "MatchesWon": 0,
+                "AllTimeAveragePlace": 24,
+                "Last5Finish": [
+                    3,
+                    3,
+                    6,
+                    5,
+                    4
+                ],
+                "PeakELO": 1020
+            }
+        },
+        {
+            "Name": "kian",
+            "ELO": 1008,
+            "ELOChange": 3,
+            "Stats": {
+                "MatchesPlayed": 4,
+                "MatchesWon": 0,
+                "AllTimeAveragePlace": 17,
+                "Last5Finish": [
+                    4,
+                    7,
+                    3,
+                    3
+                ],
+                "PeakELO": 1008
+            }
+        },
+        {
+            "Name": "kyle",
+            "ELO": 1007,
+            "ELOChange": 0,
+            "Stats": {
+                "MatchesPlayed": 1,
+                "MatchesWon": 0,
+                "AllTimeAveragePlace": 5,
+                "Last5Finish": [
+                    5
+                ],
+                "PeakELO": 1007
+            }
+        },
+        {
+            "Name": "aodhan",
+            "ELO": 1007,
+            "ELOChange": 7,
+            "Stats": {
+                "MatchesPlayed": 1,
+                "MatchesWon": 0,
+                "AllTimeAveragePlace": 3,
+                "Last5Finish": [
+                    3
+                ],
+                "PeakELO": 1007
+            }
+        },
+        {
+            "Name": "luca",
+            "ELO": 1001,
+            "ELOChange": 0,
+            "Stats": {
+                "MatchesPlayed": 1,
+                "MatchesWon": 0,
+                "AllTimeAveragePlace": 7,
+                "Last5Finish": [
+                    7
+                ],
+                "PeakELO": 1001
+            }
+        },
+        {
+            "Name": "bene",
+            "ELO": 1001,
+            "ELOChange": -10,
+            "Stats": {
+                "MatchesPlayed": 2,
+                "MatchesWon": 1,
+                "AllTimeAveragePlace": 8,
+                "Last5Finish": [
+                    1,
+                    7
+                ],
+                "PeakELO": 1011
+            }
+        },
+        {
+            "Name": "conall",
+            "ELO": 1000,
+            "ELOChange": 0,
+            "Stats": {
+                "MatchesPlayed": 0,
+                "MatchesWon": 0,
+                "AllTimeAveragePlace": 0,
+                "Last5Finish": [],
+                "PeakELO": 1000
+            }
+        },
+        {
+            "Name": "cormac",
+            "ELO": 1000,
+            "ELOChange": 0,
+            "Stats": {
+                "MatchesPlayed": 0,
+                "MatchesWon": 0,
+                "AllTimeAveragePlace": 0,
+                "Last5Finish": [],
+                "PeakELO": 1000
+            }
+        },
+        {
+            "Name": "adrianv",
+            "ELO": 998,
+            "ELOChange": -3,
+            "Stats": {
+                "MatchesPlayed": 6,
+                "MatchesWon": 0,
+                "AllTimeAveragePlace": 29,
+                "Last5Finish": [
+                    4,
+                    7,
+                    5,
+                    4,
+                    4
+                ],
+                "PeakELO": 1002
+            }
+        },
+        {
+            "Name": "olivia",
+            "ELO": 998,
+            "ELOChange": -2,
+            "Stats": {
+                "MatchesPlayed": 1,
+                "MatchesWon": 0,
+                "AllTimeAveragePlace": 5,
+                "Last5Finish": [
+                    5
+                ],
+                "PeakELO": 1000
+            }
+        },
+        {
+            "Name": "gavin",
+            "ELO": 998,
+            "ELOChange": 0,
+            "Stats": {
+                "MatchesPlayed": 1,
+                "MatchesWon": 0,
+                "AllTimeAveragePlace": 8,
+                "Last5Finish": [
+                    8
+                ],
+                "PeakELO": 1000
+            }
+        },
+        {
+            "Name": "soumitra",
+            "ELO": 997,
+            "ELOChange": -9,
+            "Stats": {
+                "MatchesPlayed": 3,
+                "MatchesWon": 0,
+                "AllTimeAveragePlace": 19,
+                "Last5Finish": [
+                    6,
+                    2,
+                    11
+                ],
+                "PeakELO": 1006
+            }
+        },
+        {
+            "Name": "ayden",
+            "ELO": 994,
+            "ELOChange": 0,
+            "Stats": {
+                "MatchesPlayed": 1,
+                "MatchesWon": 0,
+                "AllTimeAveragePlace": 9,
+                "Last5Finish": [
+                    9
+                ],
+                "PeakELO": 1000
+            }
+        },
+        {
+            "Name": "fionn",
+            "ELO": 993,
+            "ELOChange": -7,
+            "Stats": {
+                "MatchesPlayed": 1,
+                "MatchesWon": 0,
+                "AllTimeAveragePlace": 10,
+                "Last5Finish": [
+                    10
+                ],
+                "PeakELO": 1000
+            }
+        },
+        {
+            "Name": "christian",
+            "ELO": 991,
+            "ELOChange": -6,
+            "Stats": {
+                "MatchesPlayed": 2,
+                "MatchesWon": 0,
+                "AllTimeAveragePlace": 14,
+                "Last5Finish": [
+                    8,
+                    6
+                ],
+                "PeakELO": 1000
+            }
+        },
+        {
+            "Name": "dominic",
+            "ELO": 990,
+            "ELOChange": 0,
+            "Stats": {
+                "MatchesPlayed": 1,
+                "MatchesWon": 0,
+                "AllTimeAveragePlace": 10,
+                "Last5Finish": [
+                    10
+                ],
+                "PeakELO": 1000
+            }
+        },
+        {
+            "Name": "mihail",
+            "ELO": 990,
+            "ELOChange": -10,
+            "Stats": {
+                "MatchesPlayed": 1,
+                "MatchesWon": 0,
+                "AllTimeAveragePlace": 7,
+                "Last5Finish": [
+                    7
+                ],
+                "PeakELO": 1000
+            }
+        },
+        {
+            "Name": "aaron",
+            "ELO": 986,
+            "ELOChange": -14,
+            "Stats": {
+                "MatchesPlayed": 1,
+                "MatchesWon": 0,
+                "AllTimeAveragePlace": 8,
+                "Last5Finish": [
+                    8
+                ],
+                "PeakELO": 1000
+            }
+        },
+        {
+            "Name": "jake",
+            "ELO": 986,
+            "ELOChange": 0,
+            "Stats": {
+                "MatchesPlayed": 1,
+                "MatchesWon": 0,
+                "AllTimeAveragePlace": 11,
+                "Last5Finish": [
+                    11
+                ],
+                "PeakELO": 1000
+            }
+        },
+        {
+            "Name": "jack",
+            "ELO": 984,
+            "ELOChange": -16,
+            "Stats": {
+                "MatchesPlayed": 1,
+                "MatchesWon": 0,
+                "AllTimeAveragePlace": 9,
+                "Last5Finish": [
+                    9
+                ],
+                "PeakELO": 1000
+            }
+        },
+        {
+            "Name": "noah",
+            "ELO": 982,
+            "ELOChange": -15,
+            "Stats": {
+                "MatchesPlayed": 3,
+                "MatchesWon": 0,
+                "AllTimeAveragePlace": 19,
+                "Last5Finish": [
+                    7,
+                    6,
+                    6
+                ],
+                "PeakELO": 1000
+            }
+        },
+        {
+            "Name": "mohammed",
+            "ELO": 963,
+            "ELOChange": -11,
+            "Stats": {
+                "MatchesPlayed": 3,
+                "MatchesWon": 0,
+                "AllTimeAveragePlace": 28,
+                "Last5Finish": [
+                    8,
+                    8,
+                    12
+                ],
+                "PeakELO": 1000
+            }
+        }
+    ],
+    "Matches": [
+        {
+            "Results": [
+                {
+                    "Position": 1,
+                    "Player": {
+                        "Name": "ciaran",
+                        "ELO": 1016,
+                        "ELOChange": 16,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 2,
+                    "Player": {
+                        "Name": "james",
+                        "ELO": 1012,
+                        "ELOChange": 12,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 3,
+                    "Player": {
+                        "Name": "ben",
+                        "ELO": 1008,
+                        "ELOChange": 8,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 4,
+                    "Player": {
+                        "Name": "evan",
+                        "ELO": 1004,
+                        "ELOChange": 4,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 5,
+                    "Player": {
+                        "Name": "adrianv",
+                        "ELO": 1000,
+                        "ELOChange": 0,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 6,
+                    "Player": {
+                        "Name": "soumitra",
+                        "ELO": 996,
+                        "ELOChange": -4,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 7,
+                    "Player": {
+                        "Name": "noah",
+                        "ELO": 992,
+                        "ELOChange": -8,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 8,
+                    "Player": {
+                        "Name": "mohammed",
+                        "ELO": 988,
+                        "ELOChange": -12,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 9,
+                    "Player": {
+                        "Name": "jack",
+                        "ELO": 984,
+                        "ELOChange": -16,
+                        "Stats": null
+                    }
+                }
+            ],
+            "Date": "2025-09-06T20:35:11.008433944+01:00"
+        },
+        {
+            "Results": [
+                {
+                    "Position": 1,
+                    "Player": {
+                        "Name": "ciaran",
+                        "ELO": 1030,
+                        "ELOChange": 14,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 2,
+                    "Player": {
+                        "Name": "soumitra",
+                        "ELO": 1006,
+                        "ELOChange": 10,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 3,
+                    "Player": {
+                        "Name": "ben",
+                        "ELO": 1014,
+                        "ELOChange": 6,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 4,
+                    "Player": {
+                        "Name": "adrianv",
+                        "ELO": 1002,
+                        "ELOChange": 2,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 5,
+                    "Player": {
+                        "Name": "evan",
+                        "ELO": 1002,
+                        "ELOChange": -2,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 6,
+                    "Player": {
+                        "Name": "james",
+                        "ELO": 1006,
+                        "ELOChange": -6,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 7,
+                    "Player": {
+                        "Name": "mihail",
+                        "ELO": 990,
+                        "ELOChange": -10,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 8,
+                    "Player": {
+                        "Name": "mohammed",
+                        "ELO": 974,
+                        "ELOChange": -14,
+                        "Stats": null
+                    }
+                }
+            ],
+            "Date": "2025-09-06T20:35:11.008440156+01:00"
+        },
+        {
+            "Results": [
+                {
+                    "Position": 1,
+                    "Player": {
+                        "Name": "bene",
+                        "ELO": 1011,
+                        "ELOChange": 11,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 2,
+                    "Player": {
+                        "Name": "dylan",
+                        "ELO": 1009,
+                        "ELOChange": 9,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 3,
+                    "Player": {
+                        "Name": "aodhan",
+                        "ELO": 1007,
+                        "ELOChange": 7,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 4,
+                    "Player": {
+                        "Name": "ciaran",
+                        "ELO": 1035,
+                        "ELOChange": 5,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 5,
+                    "Player": {
+                        "Name": "stan",
+                        "ELO": 1003,
+                        "ELOChange": 3,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 6,
+                    "Player": {
+                        "Name": "evan",
+                        "ELO": 1003,
+                        "ELOChange": 1,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 7,
+                    "Player": {
+                        "Name": "adrianv",
+                        "ELO": 1001,
+                        "ELOChange": -1,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 8,
+                    "Player": {
+                        "Name": "christian",
+                        "ELO": 997,
+                        "ELOChange": -3,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 9,
+                    "Player": {
+                        "Name": "james",
+                        "ELO": 1001,
+                        "ELOChange": -5,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 10,
+                    "Player": {
+                        "Name": "fionn",
+                        "ELO": 993,
+                        "ELOChange": -7,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 11,
+                    "Player": {
+                        "Name": "soumitra",
+                        "ELO": 997,
+                        "ELOChange": -9,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 12,
+                    "Player": {
+                        "Name": "mohammed",
+                        "ELO": 963,
+                        "ELOChange": -11,
+                        "Stats": null
+                    }
+                }
+            ],
+            "Date": "2025-09-06T20:35:11.008451297+01:00"
+        },
+        {
+            "Results": [
+                {
+                    "Position": 1,
+                    "Player": {
+                        "Name": "james",
+                        "ELO": 1015,
+                        "ELOChange": 14,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 2,
+                    "Player": {
+                        "Name": "evan",
+                        "ELO": 1013,
+                        "ELOChange": 10,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 3,
+                    "Player": {
+                        "Name": "ben",
+                        "ELO": 1020,
+                        "ELOChange": 6,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 4,
+                    "Player": {
+                        "Name": "kian",
+                        "ELO": 1002,
+                        "ELOChange": 2,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 5,
+                    "Player": {
+                        "Name": "adrianv",
+                        "ELO": 999,
+                        "ELOChange": -2,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 6,
+                    "Player": {
+                        "Name": "christian",
+                        "ELO": 991,
+                        "ELOChange": -6,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 7,
+                    "Player": {
+                        "Name": "bene",
+                        "ELO": 1001,
+                        "ELOChange": -10,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 8,
+                    "Player": {
+                        "Name": "ciaran",
+                        "ELO": 1021,
+                        "ELOChange": -14,
+                        "Stats": null
+                    }
+                }
+            ],
+            "Date": "2025-09-06T20:35:11.008456987+01:00"
+        },
+        {
+            "Results": [
+                {
+                    "Position": 1,
+                    "Player": {
+                        "Name": "ciaran",
+                        "ELO": 1035,
+                        "ELOChange": 14,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 2,
+                    "Player": {
+                        "Name": "stan",
+                        "ELO": 1013,
+                        "ELOChange": 10,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 3,
+                    "Player": {
+                        "Name": "james",
+                        "ELO": 1021,
+                        "ELOChange": 6,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 4,
+                    "Player": {
+                        "Name": "adrianv",
+                        "ELO": 1001,
+                        "ELOChange": 2,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 5,
+                    "Player": {
+                        "Name": "olivia",
+                        "ELO": 998,
+                        "ELOChange": -2,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 6,
+                    "Player": {
+                        "Name": "ben",
+                        "ELO": 1014,
+                        "ELOChange": -6,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 7,
+                    "Player": {
+                        "Name": "kian",
+                        "ELO": 992,
+                        "ELOChange": -10,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 8,
+                    "Player": {
+                        "Name": "aaron",
+                        "ELO": 986,
+                        "ELOChange": -14,
+                        "Stats": null
+                    }
+                }
+            ],
+            "Date": "2025-09-06T20:35:11.008463029+01:00"
+        },
+        {
+            "Results": [
+                {
+                    "Position": 1,
+                    "Player": {
+                        "Name": "james",
+                        "ELO": 1036,
+                        "ELOChange": 15,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 2,
+                    "Player": {
+                        "Name": "ciaran",
+                        "ELO": 1044,
+                        "ELOChange": 9,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 3,
+                    "Player": {
+                        "Name": "kian",
+                        "ELO": 995,
+                        "ELOChange": 3,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 4,
+                    "Player": {
+                        "Name": "adrianv",
+                        "ELO": 998,
+                        "ELOChange": -3,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 5,
+                    "Player": {
+                        "Name": "ben",
+                        "ELO": 1005,
+                        "ELOChange": -9,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 6,
+                    "Player": {
+                        "Name": "noah",
+                        "ELO": 977,
+                        "ELOChange": -15,
+                        "Stats": null
+                    }
+                }
+            ],
+            "Date": "2025-09-06T20:35:11.008466605+01:00"
+        },
+        {
+            "Results": [
+                {
+                    "Position": 1,
+                    "Player": {
+                        "Name": "ciaran",
+                        "ELO": 1054,
+                        "ELOChange": 10,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 2,
+                    "Player": {
+                        "Name": "james",
+                        "ELO": 1044,
+                        "ELOChange": 8,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 3,
+                    "Player": {
+                        "Name": "kian",
+                        "ELO": 1008,
+                        "ELOChange": 13,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 4,
+                    "Player": {
+                        "Name": "ben",
+                        "ELO": 1009,
+                        "ELOChange": 4,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 5,
+                    "Player": {
+                        "Name": "kyle",
+                        "ELO": 1007,
+                        "ELOChange": 7,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 6,
+                    "Player": {
+                        "Name": "noah",
+                        "ELO": 982,
+                        "ELOChange": 5,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 7,
+                    "Player": {
+                        "Name": "luca",
+                        "ELO": 1001,
+                        "ELOChange": 1,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 8,
+                    "Player": {
+                        "Name": "gavin",
+                        "ELO": 998,
+                        "ELOChange": -2,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 9,
+                    "Player": {
+                        "Name": "ayden",
+                        "ELO": 994,
+                        "ELOChange": -6,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 10,
+                    "Player": {
+                        "Name": "dominic",
+                        "ELO": 990,
+                        "ELOChange": -10,
+                        "Stats": null
+                    }
+                },
+                {
+                    "Position": 11,
+                    "Player": {
+                        "Name": "jake",
+                        "ELO": 986,
+                        "ELOChange": -14,
+                        "Stats": null
+                    }
+                }
+            ],
+            "Date": "2025-09-06T20:34:32.536774253Z"
+        }
+    ]
+}
