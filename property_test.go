@@ -6,6 +6,7 @@ import (
 	"reflect"
 	"testing"
 	"testing/quick"
+	"time"
 )
 
 type matchInput struct {
@@ -50,7 +51,7 @@ func TestELOConservationProperty(t *testing.T) {
 			preSum += elo
 		}
 
-		if err := l.AddMatch(results); err != nil {
+		if err := l.AddMatch(results, time.Now()); err != nil {
 			return false
 		}
 

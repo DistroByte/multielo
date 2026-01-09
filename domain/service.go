@@ -1,5 +1,7 @@
 package domain
 
+import "time"
+
 type LeagueCommands interface {
 	AddPlayer(name string) error
 	RemovePlayer(name string) error
@@ -29,12 +31,14 @@ func NewLeagueService(league *League) *LeagueService {
 	return &LeagueService{league: league}
 }
 
-func (s *LeagueService) AddPlayer(name string) error              { return s.league.AddPlayer(name) }
-func (s *LeagueService) RemovePlayer(name string) error           { return s.league.RemovePlayer(name) }
-func (s *LeagueService) RecordMatch(results []*MatchResult) error { return s.league.AddMatch(results) }
-func (s *LeagueService) Reset()                                   { s.league.Reset() }
-func (s *LeagueService) ResetPlayers()                            { s.league.ResetPlayers() }
-func (s *LeagueService) ResetMatches()                            { s.league.ResetMatches() }
+func (s *LeagueService) AddPlayer(name string) error    { return s.league.AddPlayer(name) }
+func (s *LeagueService) RemovePlayer(name string) error { return s.league.RemovePlayer(name) }
+func (s *LeagueService) RecordMatch(results []*MatchResult, date time.Time) error {
+	return s.league.AddMatch(results, date)
+}
+func (s *LeagueService) Reset()        { s.league.Reset() }
+func (s *LeagueService) ResetPlayers() { s.league.ResetPlayers() }
+func (s *LeagueService) ResetMatches() { s.league.ResetMatches() }
 
 func (s *LeagueService) Player(name string) (*Player, error) { return s.league.GetPlayer(name) }
 func (s *LeagueService) Players() []*Player                  { return s.league.GetPlayers() }

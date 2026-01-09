@@ -218,7 +218,7 @@ func (l *League) GetLeaderboard() []*Player {
 	return result
 }
 
-func (l *League) AddMatch(results []*MatchResult) error {
+func (l *League) AddMatch(results []*MatchResult, date time.Time) error {
 	l.mu.Lock()
 	defer l.mu.Unlock()
 	if err := l.validator.ValidateMatchResults(results); err != nil {

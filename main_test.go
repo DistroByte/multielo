@@ -124,7 +124,7 @@ func TestLeague_AddMatch(t *testing.T) {
 			{Position: 2, Player: bob},
 		}
 
-		err := league.AddMatch(results)
+		err := league.AddMatch(results, time.Now())
 		assert.NoError(t, err)
 
 		// Check ELO changes
@@ -153,7 +153,7 @@ func TestLeague_AddMatch(t *testing.T) {
 			{Position: 1, Player: alice},
 		}
 
-		err := league.AddMatch(results)
+		err := league.AddMatch(results, time.Now())
 		assert.Error(t, err)
 
 		var eloError multielo.ELOError
@@ -174,7 +174,7 @@ func TestLeague_AddMatch(t *testing.T) {
 			{Position: 2, Player: p2},
 		}
 
-		assert.NoError(t, league.AddMatch(results))
+		assert.NoError(t, league.AddMatch(results, time.Now()))
 		assert.Equal(t, 2, len(league.GetPlayers()))
 		matchList := league.GetMatches()
 		assert.Equal(t, 1, len(matchList))
@@ -195,7 +195,7 @@ func TestLeague_AddMatch(t *testing.T) {
 			{Position: 1, Player: bob}, // Duplicate position
 		}
 
-		err := league.AddMatch(results)
+		err := league.AddMatch(results, time.Now())
 		assert.Error(t, err)
 
 		var eloError multielo.ELOError
@@ -215,7 +215,7 @@ func TestLeague_AddMatch(t *testing.T) {
 			{Position: 2, Player: nil},
 		}
 
-		err := league.AddMatch(results)
+		err := league.AddMatch(results, time.Now())
 		assert.Error(t, err)
 
 		var eloError multielo.ELOError
@@ -238,7 +238,7 @@ func TestLeague_AddMatch(t *testing.T) {
 				{Position: 1, Player: alice},
 				{Position: 2, Player: bob},
 			}
-			assert.NoError(t, league.AddMatch(results))
+			assert.NoError(t, league.AddMatch(results, time.Now()))
 		}
 
 		// Check statistics
@@ -275,7 +275,7 @@ func TestLeague_AddMatch(t *testing.T) {
 			{Position: 4, Player: dave},
 		}
 
-		err := league.AddMatch(results)
+		err := league.AddMatch(results, time.Now())
 		assert.NoError(t, err)
 
 		// Winner should have highest ELO, last place should have lowest
@@ -309,11 +309,11 @@ func TestLeague_AddMatch(t *testing.T) {
 		}
 
 		// Add matches up to limit
-		assert.NoError(t, league.AddMatch(results))
-		assert.NoError(t, league.AddMatch(results))
+		assert.NoError(t, league.AddMatch(results, time.Now()))
+		assert.NoError(t, league.AddMatch(results, time.Now()))
 
 		// Should fail on exceeding limit
-		err := league.AddMatch(results)
+		err := league.AddMatch(results, time.Now())
 		assert.Error(t, err)
 
 		var eloError multielo.ELOError
@@ -361,7 +361,7 @@ func TestLeague_ResetPlayers(t *testing.T) {
 			{Position: 1, Player: alice},
 			{Position: 2, Player: bob},
 		}
-		assert.NoError(t, league.AddMatch(results))
+		assert.NoError(t, league.AddMatch(results, time.Now()))
 
 		// Verify ELO changed
 		aliceAfter, _ := league.GetPlayer("Alice")
@@ -391,7 +391,7 @@ func TestLeague_ResetMatches(t *testing.T) {
 			{Position: 1, Player: alice},
 			{Position: 2, Player: bob},
 		}
-		assert.NoError(t, league.AddMatch(results))
+		assert.NoError(t, league.AddMatch(results, time.Now()))
 
 		// Verify matches exist
 		matches := league.GetMatches()
@@ -542,7 +542,7 @@ func TestLeague_ThreadSafety(t *testing.T) {
 					{Position: 1, Player: alice},
 					{Position: 2, Player: bob},
 				}
-				league.AddMatch(results)
+				league.AddMatch(results, time.Now())
 			}()
 		}
 
@@ -574,7 +574,7 @@ func TestLeague_GenerateGraph(t *testing.T) {
 				{Position: 1, Player: alice},
 				{Position: 2, Player: bob},
 			}
-			assert.NoError(t, league.AddMatch(results))
+			assert.NoError(t, league.AddMatch(results, time.Now()))
 		}
 
 		// Generate graph
@@ -623,7 +623,7 @@ func TestMatch(t *testing.T) {
 			{Position: 2, Player: bob},
 		}
 
-		assert.NoError(t, league.AddMatch(results))
+		assert.NoError(t, league.AddMatch(results, time.Now()))
 
 		matches := league.GetMatches()
 		assert.Equal(t, 1, len(matches))
@@ -677,7 +677,7 @@ func TestSixPlayerMultiplayerDemo(t *testing.T) {
 			{Position: 6, Player: getPlayerByName(t, league, "Frank")},
 		}
 
-		err := league.AddMatch(round1Results)
+		err := league.AddMatch(round1Results, time.Now())
 		assert.NoError(t, err)
 
 		// Check ELO changes after first match
@@ -736,7 +736,7 @@ func TestSixPlayerMultiplayerDemo(t *testing.T) {
 			{Position: 6, Player: getPlayerByName(t, league, "Alice")}, // Upset!
 		}
 
-		err = league.AddMatch(round2Results)
+		err = league.AddMatch(round2Results, time.Now())
 		assert.NoError(t, err)
 
 		// Verify Frank's dramatic improvement
@@ -787,7 +787,7 @@ func TestSixPlayerMultiplayerDemo(t *testing.T) {
 			{Position: 3, Player: getPlayerByName(t, league, "Average")},
 			{Position: 4, Player: getPlayerByName(t, league, "Beginner")},
 		}
-		err := league.AddMatch(match1)
+		err := league.AddMatch(match1, time.Now())
 		assert.NoError(t, err)
 
 		// Store baseline ELOs
@@ -804,7 +804,7 @@ func TestSixPlayerMultiplayerDemo(t *testing.T) {
 			{Position: 3, Player: getPlayerByName(t, league, "Good")},
 			{Position: 4, Player: getPlayerByName(t, league, "Pro")}, // Shocking loss
 		}
-		err = league.AddMatch(match2)
+		err = league.AddMatch(match2, time.Now())
 		assert.NoError(t, err)
 
 		// Verify dramatic rating changes due to upset
@@ -897,12 +897,12 @@ func TestRealKartingLeagueValidation(t *testing.T) {
 
 		// Create league with same initial configuration as original (ELO 1000)
 		config := multielo.LeagueConfig{
-			InitialELO:    1000,
-			MinELO:        0,
-			MaxELO:        3000,
-			KFactor:       32,
-			MaxPlayers:    100,
-			MaxMatches:    1000,
+			InitialELO:      1000,
+			MinELO:          0,
+			MaxELO:          3000,
+			KFactor:         32,
+			MaxPlayers:      100,
+			MaxMatches:      1000,
 			OutputDirectory: "output",
 		}
 		league := multielo.NewLeagueWithConfig(config)
@@ -935,7 +935,7 @@ func TestRealKartingLeagueValidation(t *testing.T) {
 			}
 
 			// Process the match
-			err := league.AddMatch(matchResults)
+			err := league.AddMatch(matchResults, time.Now())
 			assert.NoError(t, err)
 		}
 

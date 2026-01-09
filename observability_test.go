@@ -33,7 +33,7 @@ func TestObservabilityHooks(t *testing.T) {
 		t.Fatalf("expected 1 log+metric, got logs=%d metrics=%d", logger.infoCalls, metrics.playersAdded)
 	}
 	p, _ := l.GetPlayer("observer")
-	_ = l.AddMatch([]*MatchResult{{Position: 1, Player: p}, {Position: 2, Player: p}})
+	_ = l.AddMatch([]*MatchResult{{Position: 1, Player: p}, {Position: 2, Player: p}}, time.Now())
 	if metrics.matchesAdded != 1 {
 		t.Fatalf("expected 1 match metric, got %d", metrics.matchesAdded)
 	}
@@ -51,7 +51,7 @@ func TestArchiveCallback(t *testing.T) {
 	a, _ := l.GetPlayer("a")
 	b, _ := l.GetPlayer("b")
 	for i := 0; i < 3; i++ {
-		_ = l.AddMatch([]*MatchResult{{Position: 1, Player: a}, {Position: 2, Player: b}})
+		_ = l.AddMatch([]*MatchResult{{Position: 1, Player: a}, {Position: 2, Player: b}}, time.Now())
 	}
 	if count != 1 {
 		t.Fatalf("expected 1 archived, got %d", count)
@@ -66,9 +66,9 @@ func TestMatchFiltering(t *testing.T) {
 	x, _ := l.GetPlayer("x")
 	y, _ := l.GetPlayer("y")
 	z, _ := l.GetPlayer("z")
-	_ = l.AddMatch([]*MatchResult{{Position: 1, Player: x}, {Position: 2, Player: y}})
+	_ = l.AddMatch([]*MatchResult{{Position: 1, Player: x}, {Position: 2, Player: y}}, time.Now())
 	time.Sleep(time.Millisecond)
-	_ = l.AddMatch([]*MatchResult{{Position: 1, Player: z}, {Position: 2, Player: y}, {Position: 3, Player: x}})
+	_ = l.AddMatch([]*MatchResult{{Position: 1, Player: z}, {Position: 2, Player: y}, {Position: 3, Player: x}}, time.Now())
 
 	if r := l.GetMatchesFiltered(MatchFilter{PlayerName: "x"}); r.Total != 2 {
 		t.Fatalf("expected 2 matches, got %d", r.Total)

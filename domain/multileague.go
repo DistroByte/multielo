@@ -3,6 +3,7 @@ package domain
 import (
 	"context"
 	"sync"
+	"time"
 )
 
 type MultiLeagueService struct {
@@ -87,12 +88,12 @@ func (m *MultiLeagueService) AddPlayer(ctx context.Context, leagueID, playerName
 	return league.AddPlayer(playerName)
 }
 
-func (m *MultiLeagueService) RecordMatch(ctx context.Context, leagueID string, results []*MatchResult) error {
+func (m *MultiLeagueService) RecordMatch(ctx context.Context, leagueID string, results []*MatchResult, date time.Time) error {
 	league, err := m.GetLeague(ctx, leagueID)
 	if err != nil {
 		return err
 	}
-	return league.AddMatch(results)
+	return league.AddMatch(results, date)
 }
 
 func (m *MultiLeagueService) GetLeaderboard(ctx context.Context, leagueID string) ([]*Player, error) {

@@ -32,7 +32,7 @@ func SetGraphRenderer(r GraphRenderer) {
 }
 
 func (l *League) GenerateGraph() (string, error) {
-	return l.GenerateGraphWithFilename("elo")
+	return l.GenerateGraphWithFilename("index")
 }
 
 func (l *League) GenerateGraphWithFilename(filenamePrefix string) (string, error) {

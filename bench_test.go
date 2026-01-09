@@ -2,6 +2,7 @@ package multielo
 
 import (
 	"testing"
+	"time"
 )
 
 func setupLeagueForBenchmark(playerCount int) (*League, []*MatchResult) {
@@ -30,7 +31,7 @@ func BenchmarkAddMatchSmall(b *testing.B) {
 	b.ReportAllocs()
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		if err := l.AddMatch(results); err != nil {
+		if err := l.AddMatch(results, time.Now()); err != nil {
 			b.Fatalf("add match failed: %v", err)
 		}
 		if i%1000 == 0 {
@@ -45,7 +46,7 @@ func BenchmarkAddMatchMedium(b *testing.B) {
 	b.ReportAllocs()
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		if err := l.AddMatch(results); err != nil {
+		if err := l.AddMatch(results, time.Now()); err != nil {
 			b.Fatalf("add match failed: %v", err)
 		}
 		if i%1000 == 0 {
@@ -60,7 +61,7 @@ func BenchmarkAddMatchLarge(b *testing.B) {
 	b.ReportAllocs()
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		if err := l.AddMatch(results); err != nil {
+		if err := l.AddMatch(results, time.Now()); err != nil {
 			b.Fatalf("add match failed: %v", err)
 		}
 		if i%100 == 0 {
@@ -90,7 +91,7 @@ func BenchmarkGetLeaderboard(b *testing.B) {
 
 	// Add some matches to populate the league
 	for i := 0; i < 10; i++ {
-		_ = l.AddMatch(results)
+		_ = l.AddMatch(results, time.Now())
 	}
 
 	b.ReportAllocs()
@@ -106,7 +107,7 @@ func BenchmarkGetPlayerStats(b *testing.B) {
 
 	// Add some matches to build up stats
 	for i := 0; i < 50; i++ {
-		_ = l.AddMatch(results)
+		_ = l.AddMatch(results, time.Now())
 	}
 
 	player, _ := l.GetPlayer("Aa")
@@ -162,7 +163,7 @@ func BenchmarkMatchFiltering(b *testing.B) {
 
 	// Add many matches
 	for i := 0; i < 100; i++ {
-		_ = l.AddMatch(results)
+		_ = l.AddMatch(results, time.Now())
 	}
 
 	filter := MatchFilter{

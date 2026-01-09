@@ -18,7 +18,7 @@ func NewHTMLGraphRenderer() domain.GraphRenderer {
 
 var htmlColors = []string{
 	"#FF0000", "#0000FF", "#00AA00", "#FF8800", "#FF00FF",
-	"#00FFFF", "#FFFF00", "#AA0000", "#0000AA", "#00AA99",
+	"#00FFFF", "#FFFF00", "#0000AA", "#00AA99",
 	"#FF00AA", "#AAFF00", "#FF6600", "#0066FF", "#00FF66",
 	"#FF0066", "#6600FF", "#66FF00", "#0066AA", "#AA6600",
 }
@@ -115,8 +115,6 @@ func generateHTML(players []domain.GraphPlayer, history map[string][]int, partic
 
 			segX := fmt.Sprintf("%d, %d", prevIndex, raceIndex)
 			segY := fmt.Sprintf("%d, %d", elos[prevIndex], elos[raceIndex])
-			// Compute delta for this segment
-			delta := elos[raceIndex] - elos[prevIndex]
 
 			// Build trace; show hover only for decay segments
 			var trace string
@@ -130,25 +128,24 @@ func generateHTML(players []domain.GraphPlayer, history map[string][]int, partic
 	type: 'scatter',
 	mode: 'lines',
 	line: { color: %q, width: 2, dash: %q },
-		hoverinfo: 'skip',
 	opacity: %.2f,
-		hovertemplate: '<b>%s</b><br>Rating: %%{y}<extra></extra>',
+	hoverinfo: 'skip',
 	visible: true
-	}`, fmt.Sprintf("%s (%d)", player.Name, player.ELO), player.Name, showLegend, segX, segY, color, dash, opacity, player.Name)
+	}`, fmt.Sprintf("%s (%d)", player.Name, player.ELO), player.Name, showLegend, segX, segY, color, dash, opacity)
 			} else {
 				trace = fmt.Sprintf(`{
-		name: %q,
-		legendgroup: %q,
-		showlegend: %t,
-		x: [%s],
-		y: [%s],
-		type: 'scatter',
-		mode: 'lines',
-		line: { color: %q, width: 2, dash: %q },
-		opacity: %.2f,
-		hovertemplate: '<b>%s</b><br>Rating: %%{y}<br>Decay: %+d<extra></extra>',
-		visible: true
-	}`, fmt.Sprintf("%s (%d)", player.Name, player.ELO), player.Name, showLegend, segX, segY, color, dash, opacity, player.Name, delta)
+	name: %q,
+	legendgroup: %q,
+	showlegend: %t,
+	x: [%s],
+	y: [%s],
+	type: 'scatter',
+	mode: 'lines',
+	line: { color: '#AA0000', width: 2, dash: %q },
+	opacity: %.2f,
+	hoverinfo: 'skip',
+	visible: true
+	}`, fmt.Sprintf("%s (%d)", player.Name, player.ELO), player.Name, showLegend, segX, segY, dash, opacity)
 			}
 			traces = append(traces, trace)
 
@@ -160,25 +157,29 @@ func generateHTML(players []domain.GraphPlayer, history map[string][]int, partic
 		}
 
 		// Add circle markers only at attended races (no markers for missed)
-		var attendedX []string
-		var attendedY []string
-		var attendedText []string
+		var raceX []string
+		var raceY []string
+		var markerText []string
+		missed := 0
 		for raceIndex := 1; raceIndex < len(elos); raceIndex++ {
+			raceX = append(raceX, fmt.Sprintf("%d", raceIndex))
+			raceY = append(raceY, fmt.Sprintf("%d", elos[raceIndex]))
+			delta := elos[raceIndex] - elos[raceIndex-1]
+			pos := positions[player.Name][raceIndex-1]
+
 			if playerRaces[raceIndex-1] {
-				attendedX = append(attendedX, fmt.Sprintf("%d", raceIndex))
-				attendedY = append(attendedY, fmt.Sprintf("%d", elos[raceIndex]))
-				delta := elos[raceIndex] - elos[raceIndex-1]
-				pos := positions[player.Name][raceIndex-1]
-				attendedText = append(attendedText, fmt.Sprintf("Position: %d | Δ %+d", pos, delta))
+				markerText = append(markerText, fmt.Sprintf("Position: %d | Δ %+d", pos, delta))
+			} else {
+				missed += 1
+				markerText = append(markerText, fmt.Sprintf("Missed: %d | Δ %+d", missed, delta))
 			}
 		}
-		if len(attendedX) > 0 {
-			// Quote text entries to produce a valid JS array of strings
-			quoted := make([]string, len(attendedText))
-			for i, t := range attendedText {
-				quoted[i] = fmt.Sprintf("%q", t)
-			}
-			markerTrace := fmt.Sprintf(`{
+		// Quote text entries to produce a valid JS array of strings
+		quoted := make([]string, len(markerText))
+		for i, t := range markerText {
+			quoted[i] = fmt.Sprintf("%q", t)
+		}
+		markerTrace := fmt.Sprintf(`{
 	name: %q,
 	legendgroup: %q,
 	showlegend: false,
@@ -188,11 +189,10 @@ func generateHTML(players []domain.GraphPlayer, history map[string][]int, partic
 	mode: 'markers',
 	marker: { color: %q, size: 6, symbol: 'circle' },
 	text: [%s],
-		    hovertemplate: '<b>%s</b><br>Rating: %%{y}<br>%s<extra></extra>',
+	hovertemplate: '<b>%s</b><br>Rating: %%{y}<br>%s<extra></extra>',
 	visible: true
-  }`, fmt.Sprintf("%s markers", player.Name), player.Name, strings.Join(attendedX, ", "), strings.Join(attendedY, ", "), color, strings.Join(quoted, ", "), player.Name, "%{text}")
-			traces = append(traces, markerTrace)
-		}
+  }`, fmt.Sprintf("%s markers", player.Name), player.Name, strings.Join(raceX, ", "), strings.Join(raceY, ", "), color, strings.Join(quoted, ", "), player.Name, "%{text}")
+		traces = append(traces, markerTrace)
 	}
 
 	html := fmt.Sprintf(`<!DOCTYPE html>

@@ -1,6 +1,9 @@
 package multielo
 
-import "testing"
+import (
+	"testing"
+	"time"
+)
 
 type stubCalculator struct{ calls int }
 
@@ -20,7 +23,7 @@ func TestNewLeagueWithDependenciesUsesInjectedCalculator(t *testing.T) {
 	_ = l.AddPlayer("beta")
 	alpha, _ := l.GetPlayer("alpha")
 	beta, _ := l.GetPlayer("beta")
-	_ = l.AddMatch([]*MatchResult{{Position: 1, Player: alpha}, {Position: 2, Player: beta}})
+	_ = l.AddMatch([]*MatchResult{{Position: 1, Player: alpha}, {Position: 2, Player: beta}}, time.Now())
 	if calc.calls != 1 {
 		t.Fatalf("expected 1 calculator call, got %d", calc.calls)
 	}
@@ -32,7 +35,7 @@ func TestLeagueServiceProvidesCommandAndQuerySeparation(t *testing.T) {
 	_ = svc.AddPlayer("duo")
 	p1, _ := svc.Player("solo")
 	p2, _ := svc.Player("duo")
-	_ = svc.RecordMatch([]*MatchResult{{Position: 1, Player: p1}, {Position: 2, Player: p2}})
+	_ = svc.RecordMatch([]*MatchResult{{Position: 1, Player: p1}, {Position: 2, Player: p2}}, time.Now())
 	if len(svc.Players()) != 2 {
 		t.Fatal("expected 2 players")
 	}
