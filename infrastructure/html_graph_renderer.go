@@ -168,6 +168,7 @@ func generateHTML(players []domain.GraphPlayer, history map[string][]int, partic
 			pos := positions[player.Name][raceIndex-1]
 
 			if playerRaces[raceIndex-1] {
+				missed = 0
 				markerText = append(markerText, fmt.Sprintf("Position: %d | Δ %+d", pos, delta))
 			} else {
 				missed += 1
