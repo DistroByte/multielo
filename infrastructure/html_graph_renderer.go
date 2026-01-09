@@ -161,7 +161,7 @@ func generateHTML(players []domain.GraphPlayer, history map[string][]int, partic
 		var raceY []string
 		var markerText []string
 		missed := 0
-		for raceIndex := 1; raceIndex < len(elos); raceIndex++ {
+		for raceIndex := startIndex + 1; raceIndex < len(elos); raceIndex++ {
 			raceX = append(raceX, fmt.Sprintf("%d", raceIndex))
 			raceY = append(raceY, fmt.Sprintf("%d", elos[raceIndex]))
 			delta := elos[raceIndex] - elos[raceIndex-1]
